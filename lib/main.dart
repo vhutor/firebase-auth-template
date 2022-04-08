@@ -1,4 +1,5 @@
-import 'package:firebase_auth_template/sign_in_page.dart';
+import 'package:firebase_auth_template/landing_page.dart';
+import 'package:firebase_auth_template/services/auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.indigo,
       ),
-      home: const SignInPage(),
+      home: LandingPage(auth: Auth()),
     );
   }
 }

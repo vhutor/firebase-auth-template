@@ -1,11 +1,20 @@
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_auth_template/services/auth.dart';
 import 'package:firebase_auth_template/text.dart';
 import 'package:flutter/material.dart';
 
 import 'login_with_button.dart';
 
 class SignInPage extends StatelessWidget {
-  const SignInPage({Key? key}) : super(key: key);
+  final AuthBase auth;
+  const SignInPage({Key? key, required this.auth}) : super(key: key);
+
+  Future<void> _signInAnonymously() async {
+    await auth.signInAnonymously();
+  }
+
+  Future<void> _signInWithGoogle() async {
+    await auth.signInWithGoogle();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -33,12 +42,12 @@ class SignInPage extends StatelessWidget {
             LoginWithButton(
               text: tGoogle,
               imagePath: "assets/google.png",
-              function: () {},
+              function: _signInWithGoogle,
             ),
             LoginWithButton(
               text: tAnonym,
               imagePath: "assets/unknown.png",
-              function: () {},
+              function: _signInAnonymously,
             ),
           ],
         ),
