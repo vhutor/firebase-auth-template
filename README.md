@@ -1,4 +1,4 @@
-# firebase_auth_template
+# Firebase Auth Template
 
 A new Flutter project.
 
