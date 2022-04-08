@@ -2,7 +2,7 @@
 
 This Flutter project was created for template sign in options using Google, Facebook, Email and Anonymously using Firebase.
 
-Medium article for this repository: {will be included}
+Medium article for this repository: _{will be included}_
 
 **Link to courses that were used**:
 - [Flutter & Firebase: Build a Complete App for iOS & Android](https://www.udemy.com/course/flutter-firebase-build-a-complete-app-for-ios-android/
