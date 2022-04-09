@@ -16,6 +16,10 @@ class SignInPage extends StatelessWidget {
     await auth.signInWithGoogle();
   }
 
+  Future<void> _signInWithFacebook() async {
+    await auth.singInWithFacebook();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +36,7 @@ class SignInPage extends StatelessWidget {
             LoginWithButton(
               text: tFacebook,
               imagePath: "assets/facebook.png",
-              function: () {},
+              function: _signInWithFacebook,
             ),
             LoginWithButton(
               text: tEmail,
